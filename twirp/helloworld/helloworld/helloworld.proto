@@ -1,0 +1,18 @@
+syntax = "proto3";
+package twitch.twirp.example.helloworld;
+option go_package = "helloworld";
+
+// Define the route with its request and response.
+service HelloWorld {
+  rpc Hello(HelloReq) returns (HelloResp);
+}
+
+// Request.
+message HelloReq {
+  string subject = 1;
+}
+
+// Response.
+message HelloResp {
+  string text = 1;
+}
